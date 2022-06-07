@@ -90,70 +90,110 @@ namespace UserRegistrationTest
 
         }
 
-        //Sad Test Cases(Test Cases Fail The Entry)
+        //Sad Test Cases(Test Cases which Fail The Entry validation)
         [TestMethod]
-        public void GivenUserFistName_ShouldReturnFalse()
+        public void GivenUserFistName_OnValidation_ShouldThrowCustomException()
         {
-            //Arrange -- declare a firstName string variable 
-            string firstName = "zeeshan";
-            
-            //Act
-            bool FirstName = regexValidation.ValidateFirstName(firstName);
-            
-            //Assert
-            Assert.IsFalse(FirstName);
+            try
+            {
+                //Arrange -- declare a firstName string variable 
+                string firstName = "zeeshan";
+
+                //Act
+                bool FirstName = regexValidation.ValidateFirstName(firstName);
+
+
+            }
+            catch (InvalidDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid First Name", e.Message);
+                
+            }
+             
         }
 
         [TestMethod]
-        public void GivenUserLastName_ShouldReturnFalse()
+        public void GivenUserLastName_OnValidation_ShouldThrowCustomException()
         {
-            //Arrange -- declare a lastName string variable 
-            string lastName = "sarwar";
+            try
+            {
+                //Arrange -- declare a lastName string variable 
+                string lastName = "sarwar";
+
+                //Act
+                bool LastName = regexValidation.ValidateFirstName(lastName);
+
+            }
+            catch (InvalidDetailException e)
+            {
+
+                //Assert
+                Assert.AreEqual("Invalid Last Name", e.Message);
+            }
             
-            //Act
-            bool LastName = regexValidation.ValidateFirstName(lastName);
             
-            //Assert
-            Assert.IsFalse(LastName);
         }
 
         [TestMethod]
-        public void GivenEmailId_ShouldReturnFalse()
+        public void GivenEmailId_OnValidation_ShouldThrowCustomException()
         {
-            //Arrange -- declare an email string variable 
-            string email = "zeesahn.sarwar.com";
+            try
+            {
+                //Arrange -- declare an email string variable 
+                string email = "zeesahn.sarwar.com";
+
+                //Act
+                bool Email = regexValidation.ValidateEmail(email);
+
+            }
+            catch (InvalidDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Email", e.Message);
+            }
             
-            //Act
-            bool Email = regexValidation.ValidateEmail(email);
-            
-            //Assert
-            Assert.IsFalse(Email);
+           
         }
 
         [TestMethod]
-        public void GivenMobileNumber_ShouldReturnFalse()
+        public void GivenMobileNumber_OnValidation_ShouldThrowCustomException()
         {
-            //Arrange -- declare a number string variable 
-            string number = "91 0863053941";
+            try
+            {
+                //Arrange -- declare a number string variable 
+                string number = "91 0863053941";
+
+                //Act
+                bool phoneNumber = regexValidation.ValidatePhone(number);
+
+            }
+            catch (InvalidDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Phone Number", e.Message);
+            }
             
-            //Act
-            bool phoneNumber = regexValidation.ValidatePhone(number);
-            
-            //Assert
-            Assert.IsFalse(phoneNumber);
         }
 
         [TestMethod]
-        public void GivenPassword_ShouldReturnFalse()
+        public void GivenPassword_OnValidation_ShouldThrowCustomException()
         {
-            //Arrange -- declare a password string variable 
-            string password = "sarwa1r@q";
-            
-            //Act
-            bool Password = regexValidation.ValidatePassword(password);
-            
-            //Assert
-            Assert.IsFalse(Password);
+            try
+            {
+                //Arrange -- declare a password string variable 
+                string password = "sarwa1r@q";
+
+                //Act
+                bool Password = regexValidation.ValidatePassword(password);
+
+            }
+            catch (InvalidDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Password", e.Message);
+            }
+                      
         }
 
         //Data driven test attributes
