@@ -19,11 +19,3 @@ The following validations for User Registration are coded & tested:
 [ UC8 ] : As a User need to follow pre-defined Password rules. Rule4 – Has exactly one special character
 
 [ UC9 ] : Should clear all email samples provided separately
-
-[ UC10 ] : Write JUnit Test to validate the User Entry for First Name, Last Name, Email, Mobile, and Password.
-
-[ UC11 ] : Write JUnit Parameterised Test to validate multiple entry for the Email Address.
-
-[ UC12 ] : Refactor the Code to throw custom exceptions in case of Invalid User Details
-
-[ UC13 ] : Refactor the Code to use Lambda Function to validate User Entry
