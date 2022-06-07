@@ -42,45 +42,45 @@ namespace UserRegistration
 
 
         //Method for first name validation
-        public bool ValidateFirstName(string firstName)
-        {
-            return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
-        }
+        //public bool ValidateFirstName(string firstName)
+        //{
+        //    return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
+        //}
 
-        // public bool ValidateFirstName(string firstName) => (Regex.IsMatch(firstName, REGEX_FIRSTNAME));
-
-        //Method for Last name validation
-        public bool ValidateLastName(string LastName)
-        {
-            return Regex.IsMatch(LastName, REGEX_LASTNAME);
-        }
-
-        //public bool ValidateLastName(string lastName) => (Regex.IsMatch(lastName, REGEX_LASTNAME));
-
+        public bool ValidateFirstName(string firstName) => (Regex.IsMatch(firstName, REGEX_FIRSTNAME));
 
         //Method for Last name validation
-        public bool ValidateEmail(string email)
-        {
-            return Regex.IsMatch(email, REGEX_EMAIL);
-        }
+        //public bool ValidateLastName(string LastName)
+        //{
+        //    return Regex.IsMatch(LastName, REGEX_LASTNAME);
+        //}
 
-        //public bool ValidateEmail(string email) => (Regex.IsMatch(email, REGEX_EMAIL));
+        public bool ValidateLastName(string lastName) => (Regex.IsMatch(lastName, REGEX_LASTNAME));
+
+
+        //Method for Last name validation
+        //public bool ValidateEmail(string email)
+        //{
+        //    return Regex.IsMatch(email, REGEX_EMAIL);
+        //}
+
+        public bool ValidateEmail(string email) => (Regex.IsMatch(email, REGEX_EMAIL));
 
         //Method for Phone Number validation
-        public bool ValidatePhone(string PhoneNumber)
-        {
-            return Regex.IsMatch(PhoneNumber, REGEX_PHONENUMBER);
-        }
+        //public bool ValidatePhone(string PhoneNumber)
+        //{
+        //    return Regex.IsMatch(PhoneNumber, REGEX_PHONENUMBER);
+        //}
 
-        //public bool ValidatePhone(string PhoneNumber) => (Regex.IsMatch(PhoneNumber, REGEX_PHONENUMBER));
+        public bool ValidatePhone(string PhoneNumber) => (Regex.IsMatch(PhoneNumber, REGEX_PHONENUMBER));
 
 
         //Method for Password validation
-        public bool ValidatePassword(string password)
-        {
-            return Regex.IsMatch(password, REGEX_PASSWORD);
-        }
+        //public bool ValidatePassword(string password)
+        //{
+        //    return Regex.IsMatch(password, REGEX_PASSWORD);
+        //}
 
-        //public bool ValidatePassword(string password) => (Regex.IsMatch(password, REGEX_PASSWORD));
+        public bool ValidatePassword(string password) => (Regex.IsMatch(password, REGEX_PASSWORD));
     }
 }
